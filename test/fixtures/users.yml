@@ -1,0 +1,10 @@
+<% 6.times do |i| %>
+user_<%= i %>:
+  full_name: <%= "User Nr#{i}" %>
+  password_digest: <%= BCrypt::Password.create('password') %>
+  token: <%= SecureRandom.base58(24) %>
+  updated_at: <%= i == 5 ? 1.hour.ago : Time.now %>
+<% end %>
+
+
+

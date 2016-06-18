@@ -1,0 +1,9 @@
+<% 6.times do |i| %>
+<% 25.times do |n| %>
+article_<%= i %>_<%= n %>:
+  title: <%= "Example title #{i}/#{n}" %>
+  content: <%= "Example content #{i}/#{n}" %>
+  user: <%= "user_#{i}" %>
+  rating: <%= 1 + i + rand(3) %>
+  category: <%= i == 0 ? 'First' : 'Example' %>
+<% end %><% end %>
